@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#my_image").attr("src", "/Content/images/index/consult-banner.png");
+        $("#wrapper").hide();
+    });
+</script>
+
+<div class="row">
+    <div class="span8">
+        <h3><strong>CONSULTING</strong></h3>
+    </div>
+</div>
+<div class="row">
+    <div class="span8">
+        <h3>Why Consult?</h3>
+        <div class="testimonial-3 alt">
+            <blockquote>
+                <h5>Mobile applications vs. mobile websites, push notification engagement, technology-driven productivity gains, increased customer interactions through voice, SMS, web and apps… Many businesses today struggle to stay on top of the ever-growing digital and mobile technology options.<br>
+                    <br>
+                    What platforms would best suit the business? Which are most cost effective ? Which would integrate into existing systems?<br>
+                    <br>
+                    These are Informatel's areas of expertise – developed over 27 years in the communications industry.</h5>
+            </blockquote>
+        </div>
+        <!-- end .testimonial -->
+
+        <div class="row">
+            <div class="span12">
+                <div class="divider single-dotted"></div>
+            </div>
+            <!-- end .span12 -->
+        </div>
+        <!-- end .row -->
+    </div>
+    <!-- end .span8 -->
+
+    <div class="span4">
+        <div class="about-me">
+            <div class="title">
+                <h3>What we offer
+                </h3>
+            </div>
+            <!-- end .title -->
+            <div id="offer">
+                <ul>
+                    <li>No-obligation initial discussion of your requirements</li>
+                    <li>Audit of your current stakeholder communication systems</li>
+                    <li>‘Future Positioning’ for your organisation of all communication touch points</li>
+                    <li>Recommendations for technology-driven productivity improvements</li>
+                    <li>Summary Report</li>
+                    <li>Ability to create and implement recommended solutions if required</li>
+                </ul>
+            </div>
+            <br>
+            <div class="title">
+                <h3>
+                    <a href="contact.html">
+                        <img src="@Url.Content("/Content/images/icons/32x32/white/arrowright.png")" alt="" width="24" height="24">
+                        Get in Touch</a>
+                </h3>
+            </div>
+            <!-- end .title -->
+        </div>
+        <!-- about-me -->
+    </div>
+    <!-- end .span4 -->
+</div>
+<!-- end .row -->
+<br>

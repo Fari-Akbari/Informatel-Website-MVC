@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#my_image").attr("src", "/Content/images/index/banking-banner.png");
+    });
+</script>
+
+<br>
+<div class="row">
+    <div class="span8">
+        <h3><strong>BANKING</strong></h3>
+    </div>
+</div>
+
+<div class="divider single-dotted"></div>
+<div class="row">
+    <div id="pagewrap">
+        <div id="content-text">
+            <div class="testimonial-3 alt">
+                <blockquote>
+                    <h5>Informatel has developed significant communications expertise in the banking sector, working with many of Australia’s major banks, financial institutions and insurance companies.  Informatel’s reputation is unparalleled for delivering mission critical services such as payment authentication and other secure customer communications.<br>
+                        Informatel delivers for the banking sector:<br>
+                    </h5>
+                </blockquote>
+                <br>
+                <ul>
+                    <li>BankSecure</li>
+                    <li>BankCaller</li>
+                    <li>@Html.ActionLink("APPS", "Index", "APPS")</li>
+                    <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
+                    <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
+                    <li>@Html.ActionLink("Location Based Services", "Index", "ProductService")</li>
+                </ul>
+            </div>
+            <!-- end .testimonial -->
+
+        </div>
+        <div id="middle">
+            <img src="~/Content/images/index/icons-banksecure.png" alt=""><h4>BankSecure</h4>
+            <p>BankSecure is Informatel’s proprietary security system for banks. BankSecure offers secure payment transfers with two-factor authentication as well as other services for the bank's customers. BankSecure has been developed over many years of servicing the customer communications needs of the banking industry. For banks and other providers of financial services, BankSecure offers unprecedented levels of security, service redundancy, 24/7 support and back-up systems, customer alerts, audit capability, reply functionality and more.</p>
+            <br>
+            <img src="~/Content/images/index/BankSecure-logo.png" alt="">
+        </div>
+        <div id="sidebar">
+            <img src="~/Content/images/index/icons-bankcaller.png" alt=""><h4>BankCaller</h4>
+            <p>BankCaller is  a handy reminder service for banks to offer to their customers. BankCaller puts the customer in control with what and how they receive important reminders; by voice, SMS, email or even push notifications. BankCaller is like a 'digital personal assistant' for all  important banking transactions, and messages can also be received in a choice of languages. For banks, BankCaller is a tool to reduce late or forgotten payments. For customers, it means that important payments such as mortgage and credit card payments are not missed and penalty fees avoided, or alternatively, notifications about account deposits can be made.</p>
+            <br>
+            <img src="~/Content/images/index/Bankcaller-logo.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="divider single-dotted"></div>
+
+<div class="row">
+    <div class="span12">
+        <h4>Bank Clients</h4>
+        <ul class="logo" style="text-align: center;">
+            <li>
+                <img src="~/Content/images/index/logo/140x45-2.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-3.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-4.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-75.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-76.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-77.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-78.png" alt=""></li>
+        </ul>
+
+    </div>
+</div>
+<div class="divider single-dotted"></div>
+
+

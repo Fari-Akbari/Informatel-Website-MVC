@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#my_image").attr("src", "/Content/images/index/health-banner.png");
+    });
+</script>
+
+<div class="row">
+    <div class="span8">
+        <h3><strong>HEALTH</strong></h3>
+    </div>
+</div>
+<div class="divider single-dotted"></div>
+<div class="row">
+    <div id="pagewrap">
+        <div id="content-text">
+            <div class="testimonial-3 alt">
+                <blockquote>
+                    <h5>Informatel has developed significant expertise in the delivery of health and well-being services, working closely with Telstra Health particularly, as well as involvement in medication management services.  Informatel’s division HealthPro has developed many mobile apps for healthcare clients.
+                    </h5>
+                </blockquote>
+                <br>
+                <ul>
+                    <li><a href="http://www.healthproapps.com/">HealthPro Apps</a></li>
+                    <li><a href="http://medicaller.com/">Medicaller</a></li>
+                    <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
+                    <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
+                    <li>@Html.ActionLink("Location Based Services", "Index", "ProductService")</li>
+                </ul>
+            </div>
+            <!-- end .testimonial -->
+        </div>
+        <div id="middle">
+            <img src="~/Content/images/index/icons-healthpro.png" alt=""><h4>HealthPro</h4>
+            <p>
+                HealthPro Apps creates functional mobile apps for all healthcare professionals. 
+                        Catering to a range of health practitioners such as doctors, dentists, opticians, osteopaths, pharmacists, physiotherapists, chiropractors and naturopaths, HealthPro apps builds  apps with all the useful features a practice or pharmacy needs to make patient interactions easier and more efficient. 
+            </p>
+            <br>
+            <img src="~/Content/images/index/health-pro-logo.png" alt="">
+        </div>
+        <div id="sidebar">
+
+            <img src="~/Content/images/index/icons-medicaller.png" alt=""><h4>Medicaller</h4>
+            <p>
+                Medicaller is an automated telephone call reminder service to any landline or mobile number. Unlimited reminder calls can be booked for yourself, your loved ones or any number of patients associated with a hospital or healthcare service. A variety of reminder messages are available for medicine reminders, doctor or health professionals' visits, hospital or medical appointments and more.  Medicaller operates in Australia, New Zealand, UK and USA.
+            </p>
+            <br>
+            <img src="~/Content/images/index/medicaller-logo.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div class="divider single-dotted"></div>
+
+<div class="row">
+    <div class="span12">
+        <h4>Health Clients</h4>
+        <ul class="logo" style="text-align: center;">
+            <li>
+                <img src="~/Content/images/index/logo/140x45-8.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-46.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-42.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-43.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-44.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-45.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-70.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-71.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-72.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-73.png" alt=""></li>
+            <li>
+                <img src="~/Content/images/index/logo/140x45-74.png" alt=""></li>
+        </ul>
+
+    </div>
+    <!-- end .span12 -->
+</div>
+<!-- end .row -->
+<div class="divider single-dotted"></div>

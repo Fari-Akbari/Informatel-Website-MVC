@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#my_image").attr("src", "/Content/images/index/apps-banner.png");
+    });
+</script>
+
+<div class="row">
+    <div class="span8">
+        <h3><strong>APPS</strong></h3>
+    </div>
+</div>
+<div class="divider single-dotted"></div>
+
+<div class="row">
+    <div id="pagewrap">
+        <div id="content-text">
+            <img src="~/Content/images/index/icons-informatel-customapp.png" alt=""><h4>Informatel Custom Apps</h4>
+            <p>Informatel builds high quality customised apps for any type of business or organisation. If you wish to engage with your customers in a more customized way or from a unique data source, our Informatel consultants can advise how best to meet your specific needs. If your app is needed to improve productivity, we’ll show you how a customised app can make a difference to your bottom line. </p>
+            <h5>App Scoping</h5>
+            <p>A full scoping of your custom app requirements allows you to understand exactly what’s needed and how to get the best value. Scoping will deliver an accurate quotation and timeframe for development. Informatel’s developers are focused on delivering apps which meet our clients’ high expectations. For more information and to see custom app examples, please contact us.</p>
+            @Html.ActionLink("CONTACT", "index", "Contact")
+        </div>
+        <div id="middle">
+            <div class="custom-apps">
+                <img src="~/Content/images/index/car-apps.png" alt="">
+            </div>
+            <br>
+            <br>
+            <img src="~/Content/images/index/icons-appswiz-businessapp.png" alt=""><h4>AppsWiz Standard Business Apps</h4>
+            <p>AppsWiz (a division of Informatel) offers a fast and affordable way to get an app developed for your business. Using a unique process developed by AppsWiz, this templated approach provides a quality hybrid app that suits the needs of many business and organizations. </p>
+        </div>
+        <div id="sidebar-text">
+            <p>AppsWiz has developed more apps for Australian businesses than any other developer. AppsWiz is also an ideal solution if you require many apps for many businesses, each requiring their own branded app.Our platform has been built for speed and the ability to handle large volumes of apps. AppsWiz builds native and hybrid apps which work seamlessly on all IOS and Android phones and tablets and offers over 50 features which can be included in the app. AppsWiz offers a 30-day money back guarantee on all apps and no contracts. For more information and to see AppsWiz examples, please contact us.</p>
+            <a href="Contact/Index">
+                <input type="submit" value="CONTACT US" /></a>
+            <br>
+            <br>
+            <p>For more information see <a target="_blank" href="http://www.appswiz.com">www.appswiz.com.</a></p>
+            <img src="~/Content/images/index/appswiz-logo.png" alt="">
+        </div>
+    </div>
+</div>
+<br>

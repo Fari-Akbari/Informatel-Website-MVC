@@ -1,0 +1,469 @@
+/**
+ * Name: grid.css
+ * Version: 1.0.0
+ *	
+ *	-
+ *
+ *	T.O.C
+ *	
+ *	#Base Grid
+ *	#Tablet (Portrait)
+ *  #Mobile (Portrait and landscape)
+ *  #Align
+ *	#Responsive Images and embeds
+ *	#Clearing
+ *  #ResponsiveFormInputs
+ */
+ 
+
+/* ==========================================================================
+   #Base Grid
+   ========================================================================== */
+
+   #offer {
+   	padding-left:30px;
+   	padding-top:15px;
+   	padding-right:25px;
+   	line-height:30px;
+   	font-size:14px;
+   }
+
+	.row { 
+		position: relative; 
+		width: 1050px; 
+		margin: 0 auto;
+	}
+
+	.row-services { 
+		position: relative; 
+		width: 1050px !important; 
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	.row .row { 
+		width: auto; 
+		margin: 0;
+	 }
+
+	.span0,
+ 	.span1, 
+	.span2,
+	.span2a, 
+	.span3,
+	.span3a,
+	.span3b,
+	.span3c, 
+	.span4, 
+	.span5, 
+	.span6, 
+	.span7, 
+	.span8, 
+	.span8a,
+	.span9, 
+	.span10, 
+	.span11, 
+	.span12 { float: left; }
+
+	.span0 {
+		width: 800px;  
+		margin-left: 0px;
+	}
+
+	.span1 { 
+		width: 60px;  
+		margin-left: 20px; 
+	}
+	
+	.span2 { 
+		width: 140px; 
+		margin-left: 20px; 
+	}
+
+	#consultation {
+		float:right !important;
+	}
+
+	.span2a { 
+		width: 250px;
+		margin-left: 12px;
+		margin-bottom: 10px;
+		min-height: 267px !important;
+	}
+	
+	.span3 { 
+		width: 180px; 
+		margin-right: 30px; 
+		margin-left: 30px;
+		text-align: center;
+	}
+
+	.span3b { 
+		width: 220px; 
+		margin-right: 20px; 
+		text-align: left;
+	}
+
+
+	.span3c { 
+		width: 230px; 
+		 
+		text-align: left;
+	}
+	
+	.span4 { 
+		width: 600px;
+		margin-left: 20px; 
+	}
+	
+	.span5 { 
+		width: 380px; 
+		margin-left: 20px; 
+	}
+	
+	.span6 { 
+		width: 815px; 
+		margin-left: 3px; 
+	}
+	
+	.span7 { 
+		width: 540px; 
+		margin-left: 20px; 
+	}
+	
+	.span8 { 
+		width: 1050px; 
+		margin-left: 18%; 
+		
+	}
+
+	.span8a { 
+		width: 1050px; 
+		margin-left: 20px; 
+		height:115px;
+	}
+	
+	.span9 { 
+		width: 770px; 
+		margin-left: 20px; 
+	}
+
+	.contactform { 
+		width: 700px; 
+		margin-left: 20px; 
+	}
+	
+	.span10 { 
+		width: 780px; 
+		margin-left: 20px; 
+	}
+	
+	.span11 { 
+		width: 860px; 
+		margin-left: 20px; 
+	}
+	
+	.span12 { 
+		width: 1050px; 
+		margin-left: 20px; 
+	}
+	
+	.span1:first-child, 
+	.span2:first-child, 
+	.span3:first-child, 
+	.span4:first-child, 
+	.span5:first-child, 
+	.span6:first-child, 
+	.span7:first-child, 
+	.span8:first-child, 
+	.span9:first-child, 
+	.span10:first-child, 
+	.span11:first-child, 
+	.span12:first-child { margin-left: 0; }
+ 
+	.visible-phone { display: none !important; }
+	.visible-tablet { display: none !important; }
+	.hidden-desktop { display: none !important; }
+	.visible-desktop { display: inherit !important; } 
+
+	.span3a:first-child { margin-left: 30px; margin-right: 30px; text-align: center; width: 180px;}
+
+/* ==========================================================================
+   #Tablet (Portrait)
+   ========================================================================== */
+
+	@media (min-width: 768px) and (max-width: 979px) {
+		
+		.row { width: 705px; }
+
+		.row-services { width: 705px; }
+	
+		.span1 { 
+			width: 45px;  
+			margin-left: 15px; 
+		}
+		
+		.span2 { 
+			width: 105px; 
+			margin-left: 15px; 
+		}
+		
+		.span3 { 
+			width: 165px; 
+			margin-left: 15px; 
+		}
+		
+		.span4 { 
+			width: 225px; 
+			margin-left: 15px; 
+		}
+		
+		.span5 { 
+			width: 285px; 
+			margin-left: 15px; 
+		}
+		
+		.span6 { 
+			width: 345px; 
+			margin-left: 15px; 
+		}
+		
+		.span7 { 
+			width: 405px; 
+			margin-left: 15px; 
+		}
+		
+		.span8 { 
+			width: 465px; 
+			margin-left: 15px; 
+		}
+
+		.span8a { 
+			width: 465px; 
+			margin-left: 15px;
+		}
+		
+		.span9 { 
+			width: 525px; 
+			margin-left: 15px; 
+		}
+		
+		.span10 { 
+			width: 585px;
+			margin-left: 15px; 
+		}
+		
+		.span11 { 
+			width: 645px; 
+			margin-left: 15px; 
+		}
+		
+		.span12 { 
+			width: 705px;
+			margin-left: 15px; 
+		}
+		
+		.hidden-desktop { display: inherit !important; } 
+		.visible-desktop { display: none !important; }
+		.visible-tablet { display: inherit !important; } 
+		.hidden-tablet { display: none !important; }
+		
+	}
+
+/* ==========================================================================
+   #Mobile (Portrait and Landscape )
+   ========================================================================== */
+
+	@media (max-width: 767px) {
+		
+		.row { width: auto; }
+
+		.row-services { width: auto; }
+		
+		.span0,
+		.span1,
+		.span2,
+		.span3,
+		.span3a,
+		.span3b,
+		.span4,
+		.span5,
+		.span6,
+		.span7,
+		.span8,
+		.span8a,
+		.span9,
+		.span10,
+		.span11,
+		.span12 { 
+			float: none;
+			display: block;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+					box-sizing: border-box;
+			margin-left: 0;
+		}
+
+		.span8a{
+			height: 100%;
+		}
+		
+		.hidden-desktop { display: inherit !important; }
+		.visible-desktop { display: none !important; }
+		.visible-phone { display: inherit !important; }
+		.hidden-phone { display: none !important; }
+
+		.span2a {
+			text-align: center !important;
+			margin-bottom: 5px;
+		}
+		
+		.span2a:first-child {
+			text-align: center !important;
+			/*margin-top: 72px;*/
+			padding:0 !important;
+		}
+	}
+	
+/* ==========================================================================
+   #Align
+   ========================================================================== */
+
+	.float-left { float: left; }
+	.float-right { float: right; }
+
+/* ==========================================================================
+   #Responsive Images and Embeds
+   ========================================================================== */
+
+	.responsive-img { 
+		max-width: 100%; 
+		height: auto; 
+	}
+	
+	/**
+ 	 * 1. 16/9 ratio
+ 	 */
+	 
+	.responsive-embed {
+		position: relative;
+		overflow: hidden;
+		height: 0;
+		padding: 0;
+		padding-bottom: 56.25%; /* 1 */	
+		margin-bottom: 20px;
+	}
+
+	.responsive-embed iframe,
+	.responsive-embed object,
+	.responsive-embed embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+/* ==========================================================================
+   #Clearing
+   ========================================================================== */
+
+	/**
+ 	 * Automatically Clear Fix rows
+ 	 */
+	 
+	.row:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+
+	.row-services:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+
+	/**
+ 	 * Clear Fix hack
+	 * Usage:  add  class="fixed"  to div's that have floated elements in them
+ 	 */
+	 
+	.fixed:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	
+	/**
+ 	 * Clear content
+	 * Usage:  <br class="clear"> 
+ 	 */	
+	 
+	.clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+	} 
+	
+/* ==========================================================================
+   #ResponsiveFormInputs
+   ========================================================================== */
+	
+	/**
+	 * 1. Reset float inherited from .span*	
+ 	 * 2. Reset margin-left inherited from .span*
+ 	 */
+	 
+	input.span1,
+	textarea.span1,
+	select.span1,
+	input.span2,
+	textarea.span2,
+	select.span2,
+	input.span3,
+	textarea.span3,
+	select.span3,
+	input.span4,
+	textarea.span4,
+	select.span4,
+	input.span5,
+	textarea.span5,
+	select.span5,
+	input.span6,
+	textarea.span6,
+	select.span6,
+	input.span7,
+	textarea.span7,
+	select.span7,
+	input.span8,
+	textarea.span8,
+	select.span8,
+	input.span9,
+	textarea.span9,
+	select.span9,
+	input.span10,
+	textarea.span10,
+	select.span10,
+	input.span11,
+	textarea.span11,
+	select.span11,
+	input.span12,
+	textarea.span12,
+	select.span12 {
+		float: none; 	/* 1 */
+		margin-left: 0; /* 2 */
+	}

@@ -1,0 +1,884 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#header-menu").hide();
+    });
+</script>
+
+<style type="text/css">
+    input, textarea {
+        display: block;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(180, 180, 180, 0.1);
+        box-shadow: 0 1px 1px 0 rgba(180, 180, 180, 0.1);
+        width: 180px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 6px 10px;
+        border: 1px solid #fff;
+        margin-bottom: 0px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        background: none;
+        color: #fff;
+</style>
+
+<!-- /// Template CSS ////////  -->
+<link href="@Url.Content("/Content/Styles/component-form.css")" type="text/css" rel="stylesheet" />
+
+<link href="@Url.Content("/Content/Styles/colio.css")" type="text/css" media="screen" rel="stylesheet"/>
+<link href="@Url.Content("/Content/Styles/colio-black/style.css")" type="text/css" rel="stylesheet" />
+<link href="@Url.Content("/Content/Styles/colio-black/layout.css")" rel="stylesheet" type="text/css" />
+
+
+<script src="@Url.Content("/Content/Scripts/modernizr.custom.js")" type="text/javascript"></script>
+<link href="@Url.Content("/Content/Styles/elastic_grid.min.custom.css")" type="text/css" rel="stylesheet" />
+
+
+<script type="text/javascript">
+    function serviceCall(submitButton) {
+        $.ajax({
+            type: "POST",
+            url: 'http://www.informatel.com/sender/Sender.asmx/SendNow',
+            data: "{'from':'" + $("#email").val() + "', 'body':'" + $("#enquiry").val() + "', 'first':'" + $("#first_name").val() + "', 'last':'" + $("#last_name").val() + "', 'phone':'" + $("#phone").val() + "' }",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (msg) {
+                $("#result").html("<span style='color:#00CC33'>Thank you for your enquiry.</span>");
+                document.getElementById(submitButton.id).style.pointerEvents = 'none';
+            },
+            error: function (e) {
+                if (e.status == 422) {
+                    $("#result").html("<span style='color:#FFCC00'>Please fill out the form before submitting.</span>");
+                }
+                else {
+                    $("#result").html("<span style='color:#FFCC00'>Unable to send enquiry. Please try again later.</span>");
+                    document.getElementById(submitButton.id).style.pointerEvents = 'none';
+                }
+            }
+        });
+    }
+    </script>
+
+<div class="fullwidthbanner-container">
+    <div class="revolution-slider">
+        <ul>
+            <li data-transition="fade" data-slotamount="7">
+                <img src="~/Content/images/index/slider/1920x540-3.png" alt="">
+                <div class="caption title sfl"
+                    data-x="0"
+                    data-y="75"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    WE MANAGE ALL YOUR CUSTOMER CONTACTS
+                </div>
+
+                <div class="caption text sfr"
+                    data-x="0"
+                    data-y="160"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    Contact our team today to see how Informatel<br>
+                    can improve your communication systems.<br>
+                    <br>
+                    <a style="float: right; color: #ffffff;" href="Contact">Get in touch&nbsp;&nbsp;<img style="float: right;" alt="" src="~/Content/images/icons/45x45/white/arrowright-old.png" width="45" height="45"></a>
+                </div>
+            </li>
+            <li data-transition="fade" data-slotamount="7">
+
+                <img src="@Url.Content("/Content/images/index/slider/1920x540-6.png")" alt="">
+
+                <div class="caption title sfl"
+                    data-x="0"
+                    data-y="75"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    RELIABILITY 
+                </div>
+                <div class="caption medium_text sfr"
+                    data-x="0"
+                    data-y="160"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack"
+                    style="color: #516da6; text-shadow: none;">
+                    when it matters...<br>
+                    <br>
+                </div>
+
+                <div class="caption text sfr"
+                    data-x="0"
+                    data-y="200"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    <ul style="list-style-type: circle;">
+                        <li>Solutions that work every time</li>
+                        <li>Using our proven platforms</li>
+                        <li>From advice to integration & delivery</li>
+                    </ul>
+                    <br>
+                    <a style="float: right; color: #ffffff;" href="Contact">Need Reliability? Click Here&nbsp;&nbsp;<img style="float: right;" alt="" src="~/Content/images/icons/45x45/white/arrowright-old.png" width="45" height="45"></a>
+                </div>
+            </li>
+            <li data-transition="fade" data-slotamount="7">
+
+                <img src="~/Content/images/index/slider/1920x540-2.png" alt="">
+
+                <div class="caption title sfl"
+                    data-x="0"
+                    data-y="75"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    EXPERIENCE
+                </div>
+                <div class="caption medium_text sfr"
+                    data-x="0"
+                    data-y="160"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack"
+                    style="color: #516da6; text-shadow: none;">
+                    can't be underestimated...<br>
+                    <br>
+                </div>
+                <div class="caption text sfr"
+                    data-x="0"
+                    data-y="200"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    <ul style="list-style-type: circle;">
+                        <li>27 years in communications</li>
+                        <li>Understanding why your needs are key</li>
+                        <li>Experts ready to solve your problems</li>
+                    </ul>
+                    <br>
+                    <a style="float: right; color: #ffffff;" href="Contact">Need Experience? Click Here&nbsp;&nbsp;<img style="float: right;" alt="" src="~/Content/images/icons/45x45/white/arrowright-old.png" width="45" height="45"></a>
+                </div>
+            </li>
+            <li data-transition="fade" data-slotamount="7">
+                <img src="~/Content/images/index/slider/1920x540-1.png" alt="">
+                <div class="caption title sfl"
+                    data-x="0"
+                    data-y="75"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    TRUST
+                </div>
+                <div class="caption medium_text sfr"
+                    data-x="0"
+                    data-y="160"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack"
+                    style="color: #516da6; text-shadow: none;">
+                    earned from leaders in...<br>
+                    <br>
+                </div>
+                <div class="caption text sfr"
+                    data-x="0"
+                    data-y="200"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    <ul style="list-style-type: circle;">
+                        <li>Banking</li>
+                        <li>Health</li>
+                        <li>Telecommunications</li>
+                        <li>Automotive</li>
+                        <li>Media</li>
+                    </ul>
+                    <br>
+                    <a style="float: right; color: #ffffff;" href="Contact">Need Trust? Click Here&nbsp;&nbsp;<img style="float: right;" alt="" src="~/Content/images/icons/45x45/white/arrowright-old.png" width="45" height="45"></a>
+                </div>
+            </li>
+            <li data-transition="fade" data-slotamount="7">
+                <img src="@Url.Content("/Content/images/index/slider/1920x540-4.png")" alt="">
+                <div class="caption title sfl"
+                    data-x="0"
+                    data-y="75"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    SUCCESS
+                </div>
+                <div class="caption medium_text sfr"
+                    data-x="0"
+                    data-y="160"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack"
+                    style="color: #516da6; text-shadow: none;">
+                    delivered by the power of...<br>
+                    <br>
+                </div>
+                <div class="caption text sfr"
+                    data-x="0"
+                    data-y="200"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    <ul style="list-style-type: circle;">
+                        <li>SMS + Voice + Apps + Web</li>
+                        <li>Reliability + total accountability</li>
+                        <li>Cost effectiveness + proven solutions</li>
+                    </ul>
+                    <br>
+                    <a style="float: right; color: #ffffff;" href="Contact">Need Success? Click Here&nbsp;&nbsp;<img style="float: right;" alt="" src="~/Content/images/icons/45x45/white/arrowright-old.png" width="45" height="45"></a>
+                </div>
+            </li>
+            <li data-transition="fade" data-slotamount="7">
+                <img src="~/Content/images/index/slider/1920x540-5.png" alt="">
+                <div class="caption title sfl"
+                    data-x="0"
+                    data-y="75"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack">
+                    DELIVERY
+                </div>
+                <div class="caption medium_text sfr"
+                    data-x="0"
+                    data-y="160"
+                    data-speed="1000"
+                    data-start="0"
+                    data-easing="easeOutBack"
+                    style="color: #516da6; text-shadow: none;">
+                    of the whole solution...<br>
+                    <br>
+                </div>
+                <div class="caption text sfr" data-x="0" data-y="200" data-speed="1000" data-start="0" data-easing="easeOutBack">
+                    <ul style="list-style-type: circle;">
+                        <li>Delivering complete, end-to-end systems</li>
+                        <li>Design, Scope, Build, Integrate, Deliver</li>
+                        <li>Consultancy advice & more</li>
+                    </ul>
+                    <br>
+                    <a style="float: right; color: #ffffff;" href="Contact">Need Delivery? Click Here&nbsp;&nbsp;<img style="float: right;" alt="" src="~/Content/images/icons/45x45/white/arrowright-old.png" width="45" height="45"></a>
+                </div>
+            </li>
+        </ul>
+        <!--<div class="tp-bannertimer"></div>-->
+    </div>
+    <!-- end .banner -->
+</div>
+<!-- end .bannercontainer -->
+
+<div class="container">
+    <div class="callout-box-6a">
+        <div class="row">
+            <div class="span10">
+                <div class="headline">
+                    <h3>Our Services</h3>
+                </div>
+                <!-- end .headline -->
+            </div>
+        </div>
+    </div>
+
+    <!-- grid 1 -->
+    <div class="row">
+        <div class="portfolio">
+            <ul id="grid_1" class="list" style="list-style-type: none;">
+                <li data-content="#service_1">
+                    <div class="thumb colio-link">
+                        <div style="position: absolute; height: 20px; width: 100%; z-index: 9999; vertical-align: top; text-align: center; top: 50%; color: #fff; font-family: arial, sans-serif; font-size: 18px;">SMS</div>
+                        <img src="@Url.Content("/Content/images/index/services/thumbs/220x175-1.png")" alt="SMS" />
+                        <div class="view" style="position: absolute;"></div>
+                    </div>
+                </li>
+                <li data-content="#service_2">
+                    <div class="thumb">
+                        <div class="thumb colio-link">
+                            <div class="grid-label">VOICE</div>
+                            <img src="@Url.Content("/Content/images/index/services/thumbs/220x175-2.png")" alt="Voice" />
+                            <div class="view"></div>
+                        </div>
+                    </div>
+                </li>
+                <li data-content="#service_3">
+                    <div class="thumb colio-link">
+                        <div class="grid-label">APPS</div>
+                        <img src="@Url.Content("/Content/images/index/services/thumbs/220x175-8.png")" alt="Apps" />
+                        <div class="view"></div>
+                    </div>
+                </li>
+                <li data-content="#service_4">
+                    <div class="thumb colio-link">
+                        <div class="grid-label">PRODUCTS &amp; SERVICES</div>
+                        <img src="@Url.Content("/Content/images/index/services/thumbs/220x175-4.png")" alt="Products and Services" />
+                        <div class="view"></div>
+                    </div>
+                </li>
+                <li data-content="#service_5">
+                    <div class="thumb colio-link">
+                        <div class="grid-label">BANKING</div>
+                        <img src="@Url.Content("/Content/images/index/services/thumbs/220x175-5.png")" alt="Banking" />
+                        <div class="view"></div>
+                    </div>
+                </li>
+                <li data-content="#service_6">
+                    <div class="thumb colio-link">
+                        <div class="grid-label">HEALTH</div>
+                        <img src="@Url.Content("/Content/images/index/services/thumbs/220x175-3.png")" alt="Health" />
+                        <div class="view"></div>
+                    </div>
+                </li>
+
+                <li data-content="#service_7">
+                    <div class="thumb colio-link">
+                        <div class="grid-label">AUTO</div>
+                        <img src="@Url.Content("/Content/images/index/services/thumbs/220x175-6.png")" alt="Auto" />
+                        <div class="view"></div>
+                    </div>
+                </li>
+                <li data-content="#service_8">
+                    <div class="thumb colio-link">
+                        <div class="grid-label">OTHER INDUSTRIES</div>
+                        <img src="@Url.Content("/Content/images/index/services/thumbs/220x175-7.png")" alt="Other Industries" />
+                        <div class="view"></div>
+                    </div>
+                </li>
+            </ul>
+            <div id="hidden_content">
+                <div id="service_1" class="colio-content">
+                    <div class="main">
+                        <h3>SMS</h3>
+                        <p>Send bulk messages to mobiles from the Internet cheaply and easily. Informatel is one of the largest SMS messaging providers in Australia, and offers attractive rates on all SMS services.</p>
+                        <a class="visit-link" href="@Url.Content("SMS")">Read more</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/services/220x175-1.png" width="100%" style="max-width: 350px" alt="">
+                    </div>
+                </div>
+                <div id="service_2" class="colio-content">
+                    <div class="main">
+                        <h3>VOICE</h3>
+                        <p>As a pioneer in the communications industry, Informatel is a leader in voice services such as Interactive Voice Response, mass call infrastructure, call centre integration, customer callback services, call voice recording and more.</p>
+                        <a class="visit-link" href="@Url.Content("Voice")">Read more</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/services/220x175-2.png" width="100%" style="max-width: 350px" alt="">
+                    </div>
+                </div>
+                <div id="service_3" class="colio-content">
+                    <div class="main">
+                        <h3>APPS</h3>
+                        <p>AppsWiz (a division of Informatel) offers a fast and affordable way to get a mobile phone application (app) developed for your business.</p>
+                        <a class="visit-link" href="@Url.Content("APPS")">Read more</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/services/220x175-8.png" width="100%" style="max-width: 350px" alt="">
+                    </div>
+                </div>
+
+                <div id="service_4" class="colio-content">
+                    <div class="main">
+                        <h3>PRODUCTS &amp; SERVICES</h3>
+                        <p>&nbsp;</p>
+                        <a class="visit-link" href="@Url.Content("ProductService")">Read more</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/services/220x175-4.png" width="100%" style="max-width: 350px" alt="">
+                    </div>
+                </div>
+                <div id="service_5" class="colio-content">
+                    <div class="main">
+                        <h3>BANKING</h3>
+                        <p>Informatel has developed significant communications expertise in the banking sector, working with many of Australia’s major banks, financial institutions and insurance companies.</p>
+                        <a class="visit-link" href="@Url.Content("Banking")">Read more</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/services/220x175-5.png" width="100%" style="max-width: 350px" alt="">
+                    </div>
+                </div>
+                <div id="service_6" class="colio-content">
+                    <div class="main">
+                        <h3>HEALTH</h3>
+                        <p>Informatel has developed significant expertise in the delivery of health and well-being services, working closely with Telstra Health particularly, as well as involvement in medication management services.</p>
+                        <a class="visit-link" href="@Url.Content("Health")">Read more</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/services/220x175-3.png" width="100%" style="max-width: 350px" alt="">
+                    </div>
+                </div>
+
+                <div id="service_7" class="colio-content">
+                    <div class="main">
+                        <h3>AUTO</h3>
+                        <p>Informatel has long worked with the auto industry, with our mobile app division AppsWiz creating apps for a large number of car dealers and other auto industry professionals.</p>
+                        <a class="visit-link" href="@Url.Content("Auto")">Read more</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/services/220x175-6.png" width="100%" style="max-width: 350px" alt="">
+                    </div>
+                </div>
+                <div id="service_8" class="colio-content">
+                    <div class="main">
+                        <h3>OTHER INDUSTRIES</h3>
+                        <p>Informatel’s products and services are used by businesses in many different industries.</p>
+                        <a class="visit-link" href="@Url.Content("OtherIndustry")">Read more</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/services/220x175-7.png" width="100%" style="max-width: 350px" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="callout-box">
+    <div class="row">
+        <div class="span0">
+            <!--<form class="cbp-mc-form">-->
+            <br>
+            <h3 style="color: #fff;">Can we help you with a FREE Consultation?</h3>
+            <ul class="contact">
+                <li>
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="">
+                </li>
+                <li>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="">
+                </li>
+                <li>
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email" placeholder="">
+                </li>
+                <li>
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" placeholder="">
+                </li>
+                <li>
+                    <div id="result"></div>
+                </li>
+            </ul>
+            <!--</form>-->
+        </div>
+        <div class="span2" id="consultation" style="padding: 0 22px">
+            <div id="submit-button" class="buttons ani fadeInRight" onclick="serviceCall(this);">
+                <img src="~/Content/images/icons/32x32/white/arrowright.png" alt="" width="32" height="32">
+                <h3 style="color: #ffffff;">SUBMIT
+                </h3>
+            </div>
+            <!-- end .buttons -->
+        </div>
+        <!-- end .span2 -->
+    </div>
+    <!-- end .row -->
+</div>
+<!-- end .callout-box-3 -->
+
+
+<div class="container" id="case-studies">
+    <div class="callout-box-6a">
+        <div class="row">
+            <div class="span10">
+                <div class="headline">
+                    <h3>Case Studies</h3>
+                </div>
+                <!-- end .headline -->
+            </div>
+        </div>
+    </div>
+    <!-- grid 2 -->
+    <div class="row">
+        <div class="portfolio">
+            <ul id="grid_2" class="list" style="list-style-type: none;">
+                <li data-content="#case_1">
+                    <div class="thumb colio-link">
+                        <div class="view"></div>
+                        <img src="~/Content/images/index/case-studies/thumbs/1.jpg" alt="George the speaking clock" />
+                    </div>
+                    <div class="grid-label-bottom colio-link">
+                        GEORGE THE SPEAKING CLOCK
+                    </div>
+                </li>
+                <li data-content="#case_2">
+                    <div class="thumb colio-link">
+                        <div class="view"></div>
+                        <img src="~/Content/images/index/case-studies/thumbs/2.jpg" alt="Premium phone service" />
+                    </div>
+                    <div class="grid-label-bottom colio-link">
+                        PREMIUM PHONE SERVICE
+                    </div>
+                </li>
+                <li data-content="#case_3">
+                    <div class="thumb colio-link">
+                        <div class="view"></div>
+                        <img src="~/Content/images/index/case-studies/thumbs/3.jpg" alt="Payment platform" />
+                    </div>
+                    <div class="grid-label-bottom colio-link">
+                        PAYMENT PLATFORM
+                    </div>
+                </li>
+            </ul>
+            <div id="hidden_content">
+                <div id="case_1" class="colio-content">
+                    <div class="main">
+                        <h3>GEORGE THE SPEAKING CLOCK</h3>
+                        <p>Telstra’s 1194 time service (commonly known as “George the speaking clock”) has been running for decades providing a traceble and accurate time for all Australians. Since 2006 Informatel has powered Telstra’s 1194 service. We understand what mission critical and accuracy is all about and time is no exception.</p>
+                        <p>We all rely on time. Informatel has designed with our partners the National Measurement Institute (regulators of the national standard of time measurement; part of the Australian government) a system without compromise.</p>
+                        <p>Informatel’s core time system is a redundant pair of Rubidium Atomic Clocks which are maintained within 500 microseconds of UTC (AUS). The traceability of this clock to the National Measurement Institute (NMI) and UTC (AUS) is established by continuous monitoring and recording of data, on the basis of which regular NATA-endorsed reports are issued to Informatel by the National Measurement Institute.</p>
+                        <p>Using our extensive infrasructure and capacity, our systems ensure that even during peak periods (daylight savings start/end and New Years Eve) that your call will get through.</p>
+                        <a class="visit-link" href="http://www.telstra.com.au">Website</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/case-studies/1.jpg" width="100%" style="max-width: 500px" alt="">
+                    </div>
+                </div>
+                <div id="case_2" class="colio-content">
+                    <div class="main">
+                        <h3>PREMIUM PHONE SERVICE</h3>
+                        <p>Customer service levels are paramount for Dodo and Informatel helps deliver innovative customer service capabilities across a number of their expanding product offerings.</p>
+                        <p>When a call is placed to Dodo’s technical support line, Informatel’s fully integrated system handles the call to ensure that it is promptly answered or managed intelligently. Depending on the current queue waiting time the system will automatically interrogate Dodo’s call management system and ascertain when a callback can next occur. The caller is then given the option to enter their telephone number for a callback and is given a time for the callback. Our system then places a callback request in the Dodo call management system and at the specified time a Dodo representative calls the caller back.</p>
+                        <p>The caller is saved from having to wait in potential lengthly queues and is guaranteed a callback. The callback completes the loop and ensures that customer satisfaction is high. This system is another example of how Informatel can integrate with call centres to provide efficiencies and high levels of customer service.</p>
+                        <a class="visit-link" href="http://www.dodo.com">Website</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/case-studies/2.jpg" width="100%" style="max-width: 500px" alt="">
+                    </div>
+                </div>
+                <div id="case_3" class="colio-content">
+                    <div class="main">
+                        <h3>PAYMENT PLATFORM</h3>
+                        <p>MobileMoney is an online payment platform allowing quick and easy set up of payment systems for websites. MobileMoney utilises Informatel’s ConnectREADY gateway to provide all of their Australian messaging delivery requirements including Premium Rate billing.</p>
+                        <p>MobileMoney uses Informatel to send a variety of compelling and unique SMS based mobile content, including logos, pictures, ringtones and games to consumers or through their global affiliate network. Via ConnectREADY, MobileMoney can concentrate on their core business without having to establish complex commercial relationships with all the Australian carriers. MobileMoney continues to innovate providing cutting edge mobile content, while leveraging Informatel’s infrastructure to deliver the complete solution.</p>
+                        <a class="visit-link" href="http://www.mobilemoney.com">Website</a>
+                    </div>
+                    <div class="side">
+                        <img src="~/Content/images/index/case-studies/3.jpg" width="100%" style="max-width: 500px" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span12">
+        <div id="client-testimonial-double">
+            <div class="row">
+                <div class="span3b">
+                    <div class="headline">
+                        <h6>Testimonials</h6>
+                        <h4>Our clients</h4>
+                    </div>
+                    <!-- end .headline -->
+                    <div id="pager"></div>
+                </div>
+                <!-- end .span3a -->
+                <div class="span9">
+
+                    <ul class="slides">
+                        <li>
+                            <div class="sub-headline">
+                            </div>
+                            <!-- end .sub-headline -->
+
+                            <div class="testimonial-2">
+                                <img src="~/Content/images/index/testimonial-author/60x60-1.png" alt="">
+                                <blockquote>
+                                    <p>
+                                        &quot; The Informatel Group are experts in finding and promoting cost-effective and innovative solutions for customer contact requirements. In the years of working with Informatel I found their staff direct and enterprising in the way they approach client activities as well as focused on excellent customer service. I have no hesitation in recommending the team at Informatel. &quot;
+                                    </p>
+                                    <span>Senior Advisor - Suncorp Group &nbsp;&nbsp;<a target="_blank" href="http://www.suncorpgroup.com.au/">www.suncorpgroup.com.au</a></span>
+                                </blockquote>
+                            </div>
+                            <!-- end .testimonial-2 -->
+                        </li>
+                        <li>
+                            <div class="sub-headline">
+                            </div>
+                            <!-- end .sub-headline -->
+
+                            <div class="testimonial-2">
+                                <img src="~/Content/images/index/testimonial-author/60x60-4.png" alt="">
+                                <blockquote>
+                                    <p>
+                                        &quot; Westpac's integration with Informatel¹s systems spans many years. We rely on them to deliver a range of communications services including mass volume SMS as well as crucial, time-critical service to our customers in our two-step authentication process for online and mobile payments.  Informatel has always offered an absolutely dependable service which meets our stringent banking industry requirements. &quot;
+                                    </p>
+                                    <span>Gary Collins, Head Mobile Banking & InStore banking - Westpac Pacific &nbsp;&nbsp;<a target="_blank" href="http://www.westpac.com.au/">www.westpac.com.au</a></span>
+                                </blockquote>
+                            </div>
+                            <!-- end .testimonial-2 -->
+                        </li>
+                        <li>
+                            <div class="sub-headline">
+                            </div>
+                            <!-- end .sub-headline -->
+
+                            <div class="testimonial-2">
+                                <img src="~/Content/images/index/testimonial-author/60x60-5.png" alt="">
+                                <blockquote>
+                                    <p>
+                                        &quot; The Nine Network has used a number of Informatel¹s services over the years in a range of major campaigns.  Most notably they handled large volumes of viewer calls to various programs, voting lines and surveys.  Always innovative and able to rise to new challenges, I¹d recommend them for any telecommunications requirement large or small. &quot;
+                                    </p>
+                                    <span>Paul Waldren, Managing Director - Nine Network Australia  &nbsp;&nbsp;<a target="_blank" href="http://www.9jump-in.com.au/">www.9jump-in.com.au</a></span>
+                                </blockquote>
+                            </div>
+                            <!-- end .testimonial-2 -->
+                        </li>
+                        <li>
+                            <div class="sub-headline">
+                            </div>
+                            <!-- end .sub-headline -->
+
+                            <div class="testimonial-2">
+                                <img src="~/Content/images/index/testimonial-author/60x60-6.png" alt="">
+                                <blockquote>
+                                    <p>
+                                        &quot; I have worked with The Informatel Group¹s Management for several years. They have demonstrated innovation across the multiple touch-points of sms, voice, web and apps. I know of no other company in Australia offering this diverse range of services which they also do so well. &quot;
+                                    </p>
+                                    <span>Tuncer Oluklu, Founder - InfoCentric &nbsp;&nbsp;<a target="_blank" href="http://www.infocentric.com.au/">www.infocentric.com.au</a></span>
+                                </blockquote>
+                            </div>
+                            <!-- end .testimonial-2 -->
+                        </li>
+                        <li>
+                            <div class="sub-headline">
+                            </div>
+                            <!-- end .sub-headline -->
+
+                            <div class="testimonial-2">
+                                <img src="~/Content/images/index/testimonial-author/60x60-3.png" alt="">
+                                <blockquote>
+                                    <p>
+                                        &quot; Telstra considers Informatel a key business partner for a complex range of systems including data, voice and messaging. The company’s reliability is well established with delivery of mission critical services such as the 1194 time service, Sensis and others. Informatel’s professionalism makes working together easier no matter how big the challenge. &quot;
+                                    </p>
+                                    <span>Martin Ince, Portfolio Mgr Premium Rate Partners - Telstra &nbsp;&nbsp;<a target="_blank" href="http://www.telstra.com.au">www.telstra.com.au</a></span>
+                                </blockquote>
+                            </div>
+                            <!-- end .testimonial-2 -->
+                        </li>
+                        <li>
+                            <div class="sub-headline">
+                            </div>
+                            <!-- end .sub-headline -->
+
+                            <div class="testimonial-2">
+                                <img src="~/Content/images/index/testimonial-author/60x60-2.png" alt="">
+                                <blockquote>
+                                    <p>
+                                        &quot; Dodo has relied on Informatel’s attention to detail and ‘can do’ attitude to get the job done no matter what. We always feel supported by Informatel’s team, one that always delivers effectively and on time for us in these competitive times. &quot;
+                                    </p>
+                                    <span>Larry Kestelman, Managing Director - Dodo  &nbsp;&nbsp;<a target="_blank" href="http://www.dodo.com">www.dodo.com</a></span>
+                                </blockquote>
+                            </div>
+                            <!-- end .testimonial-2 -->
+                        </li>
+                        <li>
+                            <div class="sub-headline">
+                            </div>
+                            <!-- end .sub-headline -->
+
+                            <div class="testimonial-2">
+                                <img src="~/Content/images/index/testimonial-author/60x60-7.png" alt="">
+                                <blockquote>
+                                    <p>
+                                        &quot; We had to manage a recall of 1600 natural health products and vitamins in one of the world’s largest-ever recalls of its kind. I was impressed with the proactive approach of Informatel and its ability to respond to the substantial communications demands of this crisis with professionalism and flexibility.  I have no hesitation recommending them. &quot;
+                                    </p>
+                                    <span>Richard Lazar, Managing Director - Professional Public Relations  &nbsp;&nbsp;<a target="_blank" href="http://www.ppr.com.au/melbourne/">www.ppr.com.au</a></span>
+                                </blockquote>
+                            </div>
+                            <!-- end .testimonial-2 -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- end .span9 -->
+            </div>
+            <!-- end .row -->
+        </div>
+        <!-- end #client-testimonial-double -->
+    </div>
+    <!-- end .span12 -->
+</div>
+<!-- end .row -->
+
+           <!-- /// jQuery ////////  -->
+           <script src="@Url.Content("/Content/Scripts/jquery-2.0.3.min.js")" type="text/javascript"></script>
+           
+           <!-- /// ViewPort ////////  -->
+           <script src="~/Content/Scripts/viewport/jquery.viewport.js"></script>
+
+           <!-- /// Waypoints ////////  -->
+           <script src="~/Content/Scripts/waypoints/waypoints.min.js"></script>
+
+            <!-- /// Superfish ////////  -->
+           <script src="~/Content/Scripts/superfish/hoverIntent.js"></script>
+           <script src="~/Content/Scripts/superfish/superfish.js"></script>
+
+            <!-- /// bxSlider ////////  -->  
+           <script src="~/Content/Scripts/bxslider/plugins/jquery.easing.1.3.js"></script>
+           <script src="~/Content/Scripts/bxslider/plugins/jquery.fitvids.js"></script>
+           <script src="~/Content/Scripts/bxslider/jquery.bxslider.min.js"></script>
+
+           <!-- /// RevolutionSlider ////////  -->
+           <script src="@Url.Content("/Content/Scripts/rs-plugin/js/jquery.themepunch.tools.min.js")" type="text/javascript"></script>
+           <script src="@Url.Content("/Content/Scripts/rs-plugin/js/jquery.themepunch.revolution.min.js")" type="text/javascript"></script>
+
+           <!-- /// Parallax ////////  -->
+           <script src="~/Content/Scripts/parallax/jquery.parallax.min.js"></script>
+
+           <!-- /// Magnific Popup ////////  -->
+           <script src="~/Content/Scripts/magnificpopup/jquery.magnific-popup.min.js"></script>
+
+           <!-- /// EasyPieChart ////////  -->
+           <script src="~/Content/Scripts/easypiechart/jquery.easypiechart.min.js"></script>
+
+           <!-- /// Tabs ////////  -->
+           <script src="~/Content/Scripts/tabify/jquery.tabify.min.js"></script>
+
+           <!-- /// Form validate ////////  -->
+           <script src="~/Content/Scripts/jqueryvalidate/jquery.validate.min.js"></script>
+
+           <!-- /// Form submit ////////  -->
+           <script src="~/Content/Scripts/jqueryform/jquery.form.min.js"></script>
+
+           <!-- /// gMap ////////  -->
+           <script src="~/Content/Scripts/gmap/jquery.gmap.min.js"></script>
+
+           <!-- /// Isotope ////////  -->
+           <script src="@Url.Content("/Content/Scripts/isotope/jquery.isotope.min.js")" type="text/javascript" ></script>
+
+           <!-- /// Custom JS ////////  -->
+           <script src="~/Content/Scripts/jquery.slimmenu.js"></script>
+           <script src="~/Content/Scripts/plugins.js"></script>
+           <script src="~/Content/Scripts/scripts.js"></script>
+           <script src="@Url.Content("/Content/Scripts/grid.js")" type="text/javascript"></script>
+           <script>
+               $(function () {
+                   Grid.init();
+               });
+           </script>
+
+
+           <script src="@Url.Content("/Content/Scripts/classie.js")" type="text/javascript"></script>
+           <script src="@Url.Content("/Content/Scripts/elastic_grid.min.js")" type="text/javascript"></script>
+
+           <script type="text/javascript" src="@Url.Content("/Content/Scripts/jquery.colio.min.js")"></script>
+
+           <script type="text/javascript">
+               $(document).ready(function () {
+
+                   $('#grid_1').colio({
+                       id: 'colio_grid_1',
+                       theme: 'black',
+                       placement: 'after'
+                   });
+
+                   $('#grid_2').colio({
+                       id: 'colio_grid_2',
+                       theme: 'black',
+                       placement: 'after'
+                   });
+
+                   jQuery('.revolution-slider').revolution({
+                       delay: 4000,
+                       startwidth: 960,
+                       startheight: 500,
+                       startWithSlide: 0,
+
+                       fullScreenAlignForce: "off",
+                       autoHeight: "off",
+                       minHeight: "off",
+
+                       shuffle: "off",
+
+                       onHoverStop: "on",
+
+                       thumbWidth: 100,
+                       thumbHeight: 50,
+                       thumbAmount: 3,
+
+                       hideThumbsOnMobile: "off",
+                       hideNavDelayOnMobile: 1500,
+                       hideBulletsOnMobile: "on",
+                       hideArrowsOnMobile: "on",
+                       hideThumbsUnderResoluition: 0,
+
+                       hideThumbs: 0,
+                       hideTimerBar: "on",
+
+                       keyboardNavigation: "on",
+
+                       navigationType: "bullet",
+                       navigationArrows: "solo",
+                       navigationStyle: "round",
+
+                       navigationHAlign: "center",
+                       navigationVAlign: "bottom",
+                       navigationHOffset: 30,
+                       navigationVOffset: 30,
+
+                       soloArrowLeftHalign: "left",
+                       soloArrowLeftValign: "center",
+                       soloArrowLeftHOffset: 20,
+                       soloArrowLeftVOffset: 0,
+
+                       soloArrowRightHalign: "right",
+                       soloArrowRightValign: "center",
+                       soloArrowRightHOffset: 20,
+                       soloArrowRightVOffset: 0,
+
+
+                       touchenabled: "on",
+                       swipe_velocity: "0.7",
+                       swipe_max_touches: "1",
+                       swipe_min_touches: "1",
+                       drag_block_vertical: "false",
+
+                       parallax: "mouse",
+                       parallaxBgFreeze: "on",
+                       parallaxLevels: [10, 7, 4, 3, 2, 5, 4, 3, 2, 1],
+                       parallaxDisableOnMobile: "off",
+
+                       stopAtSlide: -1,
+                       stopAfterLoops: -1,
+                       hideCaptionAtLimit: 0,
+                       hideAllCaptionAtLilmit: 0,
+                       hideSliderAtLimit: 0,
+
+                       dottedOverlay: "none",
+
+                       spinned: "spinner4",
+
+                       fullWidth: "off",
+                       forceFullWidth: "off",
+                       fullScreen: "off",
+                       fullScreenOffsetContainer: "#topheader-to-offset",
+                       fullScreenOffset: "0px",
+
+                       panZoomDisableOnMobile: "off",
+
+                       simplifyAll: "off",
+
+                       shadow: 0
+
+                   });
+               });
+           </script>
+           <script>
+               (function (i, s, o, g, r, a, m) {
+                   i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                       (i[r].q = i[r].q || []).push(arguments)
+                   }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                   m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+               })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+               ga('create', 'UA-4117263-29', 'auto');
+               ga('send', 'pageview');
+
+           </script>
