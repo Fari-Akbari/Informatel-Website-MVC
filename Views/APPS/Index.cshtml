@@ -2,15 +2,56 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-@section JavaScriptHeader
+@section HeadMeta
 {
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#my_image").attr("src", "/Content/images/index/apps-banner.png");
-        });
-    </script>
+    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
+    <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
+    <meta name="author" content="informatel - http://www.informatel.com">
 }
+
+@section CascadingStyleSheetClasses
+{
+    <style>
+        input[type="submit"] {
+            text-transform: uppercase;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            padding: 10px;
+            background: #516da6;
+        }
+    </style>
+}
+
+<div id="header-menu">
+    @section banner
+                    {
+        <div class="banner" style="width: 100%; overflow: hidden;">
+            <img src="@Url.Content("/Content/images/index/apps-banner.png")" alt="" id="my_image" />
+        </div>
+    }
+    @section slimmenu
+                    {
+        <div id="wrapper">
+            <header class="cf">
+                <nav>
+                    <ul class="slimmenu">
+                        <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
+                        <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
+                        <li>@Html.ActionLink("APPS", "Index", "APPS")</li>
+                        <li>@Html.ActionLink("PRODUCTS AND SERVICES", "Index", "ProductService")</li>
+                        <li>@Html.ActionLink("BANKING", "Index", "Banking")</li>
+                        <li>@Html.ActionLink("HEALTH", "Index", "Health")</li>
+                        <li>@Html.ActionLink("AUTO", "Index", "Auto")</li>
+                        <li>@Html.ActionLink("OTHER INDUSTRIES", "Index", "OtherIndustry")</li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    }
+    <br />
+</div>
 
 <div class="row">
     <div class="span8">
@@ -26,7 +67,8 @@
             <h5>App Scoping</h5>
             <p>A full scoping of your custom app requirements allows you to understand exactly what’s needed and how to get the best value. Scoping will deliver an accurate quotation and timeframe for development. Informatel’s developers are focused on delivering apps which meet our clients’ high expectations. For more information and to see custom app examples, please contact us.</p>
             <a href="Contact/Index">
-                <input type="submit" value="CONTACT US" style="font-size: 1.1em"/></a>
+                <input type="submit" value="CONTACT US" />
+            </a>
         </div>
         <div id="middle">
             <div class="custom-apps">
@@ -40,7 +82,7 @@
         <div id="sidebar-text">
             <p>AppsWiz has developed more apps for Australian businesses than any other developer. AppsWiz is also an ideal solution if you require many apps for many businesses, each requiring their own branded app.Our platform has been built for speed and the ability to handle large volumes of apps. AppsWiz builds native and hybrid apps which work seamlessly on all IOS and Android phones and tablets and offers over 50 features which can be included in the app. AppsWiz offers a 30-day money back guarantee on all apps and no contracts. For more information and to see AppsWiz examples, please contact us.</p>
             <a href="Contact/Index">
-                <input type="submit" value="CONTACT US" style="font-size: 1.1em"/></a>
+                <input type="submit" value="CONTACT US" /></a>
             <br />
             <br />
             <p>For more information see <a target="_blank" href="http://www.appswiz.com">www.appswiz.com.</a></p>

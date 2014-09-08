@@ -3,14 +3,41 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section JavaScriptHeader
+@section HeadMeta
 {
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#my_image").attr("src", "/Content/images/index/health-banner.png");
-        });
-    </script>
+    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
+    <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
+    <meta name="author" content="informatel - http://www.informatel.com">
 }
+
+<div id="header-menu">
+    @section banner
+                    {
+        <div class="banner" style="width: 100%; overflow: hidden;">
+            <img src="@Url.Content("/Content/images/index/health-banner.png")" alt="" id="my_image" />
+        </div>
+    }
+    @section slimmenu
+                    {
+        <div id="wrapper">
+            <header class="cf">
+                <nav>
+                    <ul class="slimmenu">
+                        <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
+                        <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
+                        <li>@Html.ActionLink("APPS", "Index", "APPS")</li>
+                        <li>@Html.ActionLink("PRODUCTS AND SERVICES", "Index", "ProductService")</li>
+                        <li>@Html.ActionLink("BANKING", "Index", "Banking")</li>
+                        <li>@Html.ActionLink("HEALTH", "Index", "Health")</li>
+                        <li>@Html.ActionLink("AUTO", "Index", "Auto")</li>
+                        <li>@Html.ActionLink("OTHER INDUSTRIES", "Index", "OtherIndustry")</li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    }
+    <br />
+</div>
 
 <div class="row">
     <div class="span8">

@@ -3,15 +3,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@section JavaScriptHeader
+@section HeadMeta
 {
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#my_image").attr("src", "/Content/images/index/consult-banner.png");
-            $("#wrapper").hide();
-        });
-    </script>
+    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
+    <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
+    <meta name="author" content="informatel - http://www.informatel.com">
 }
+
+<div id="header-menu">
+    @section banner
+                    {
+        <div class="banner" style="width: 100%; overflow: hidden;">
+            <img src="@Url.Content("/Content/images/index/consult-banner.png")" alt="" id="my_image" />
+        </div>
+    }
+    <br />
+</div>
 
 <div class="row">
     <div class="span8">
@@ -31,7 +38,6 @@
             </blockquote>
         </div>
         <!-- end .testimonial -->
-
         <div class="row">
             <div class="span12">
                 <div class="divider single-dotted"></div>
@@ -41,7 +47,6 @@
         <!-- end .row -->
     </div>
     <!-- end .span8 -->
-
     <div class="span4">
         <div class="about-me">
             <div class="title">

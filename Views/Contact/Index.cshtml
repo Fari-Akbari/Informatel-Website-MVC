@@ -2,7 +2,15 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@section StyleInput
+
+@section HeadMeta
+{
+    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
+    <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
+    <meta name="author" content="informatel - http://www.informatel.com">  
+}
+
+@section CascadingStyleSheetClasses
 {
     <style type="text/css">
         input,
@@ -41,7 +49,7 @@
     </style>
 }
 
-@section JavaScriptHeader
+@section JavaScriptMethod
 {
     <script type="text/javascript">
         $(document).ready(function () {
@@ -60,7 +68,6 @@
         </div>
     </div>
 </div>
-
 @using (Html.BeginForm("Index", "Contact", FormMethod.Post))
 {    
     @Html.AntiForgeryToken()
@@ -104,7 +111,6 @@
         <!-- end .row -->
     </div>
 }
-
 <div class="callout-box-6a">
     <div class="row">
         <div class="span10">

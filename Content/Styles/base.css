@@ -433,7 +433,7 @@
 	input[type="checkbox"],
 	input[type="reset"],
 	input[type="submit"] {
-	  	/*cursor: pointer;
+	  	cursor: pointer;
 	  	background: #494848;
 		border: none;
 		color: #fff;
@@ -445,22 +445,11 @@
 		font-size: 1.1em;
 		border-radius: 2px;
 		letter-spacing: 1px;
-		margin-top:0px;*/
-           border:none;
-    background: #516da6;
-    padding: 10px;
-    color: #ffffff;
-    text-shadow: none;
-    border-radius: none;
-    cursor: pointer;font-size: 1.2em;
+		margin-top:0px;
 	}
 
 	input[type="submit"]:hover {
-	/*background: #5b5959;*/
-    background: #3a5489;
-color: #ffffff;
-text-shadow: none;
-}
+	background: #5b5959;
 	}
 
 	
@@ -536,22 +525,22 @@ text-shadow: none;
 
 /* #Misc
    ========================================================================== */
-@media screen and (max-width: 70em) {
+   @media screen and (max-width: 70em) {
 
-    input,
-    textarea,
-    select {
-        width: 100% !important;
-        padding: 10px !important;
-    }
+   	input,
+	textarea,
+	select {
+		width: 100% !important;
+		padding: 10px !important;
+	}
 
 
-    @media screen and (max-width: 48em) {
-
-        input,
-        textarea,
-        select {
-            width: 100% !important;
-            padding: 10px !important;
-        }
-    }
+   @media screen and (max-width: 48em) {
+   
+   	input,
+	textarea,
+	select {
+		width: 100% !important;
+		padding: 10px !important;
+	}
+}
