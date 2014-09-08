@@ -4,12 +4,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#header-menu").hide();
-    });
-</script>
+@section JavaScriptHeader
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header-menu").hide();
+        });
+    </script>
+}
 
 <div class="callout-box-6a">
     <div class="row">
@@ -22,7 +24,7 @@
     </div>
 </div>
 <div class="banner" style="width: 100%; overflow: hidden;">
-    <img src="~/Content/images/index/terms-banner.png" alt="">
+    <img src="@Url.Content("/Content/images/index/terms-banner.png")" alt="" />
 </div>
 <div class="row">
     <div class="span8">
@@ -55,6 +57,6 @@
     <!-- end .span8 -->
 </div>
 <!-- end .row -->
-<br>
+<br />
 
 

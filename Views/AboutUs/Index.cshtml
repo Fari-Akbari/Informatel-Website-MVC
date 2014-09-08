@@ -3,12 +3,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#header-menu").hide();
-    });
-</script>
+@section JavaScriptHeader
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#header-menu").hide();
+        });
+    </script>
+}
 
 <div class="callout-box-6a">
     <div class="row">
@@ -20,9 +22,8 @@
         </div>
     </div>
 </div>
-
 <div class="banner" style="width: 100%; overflow: hidden;">
-    <img src="~/Content/images/index/about-banner.png" alt="">
+    <img src="@Url.Content("/Content/images/index/about-banner.png")" alt="">
 </div>
 <div class="row">
     <div class="span8">
@@ -33,69 +34,57 @@
             <!-- end .span12 -->
         </div>
         <!-- end .row -->
-
         <h4>Informatel</h4>
-
         <p>Since inception in 1987, Informatel has earned a reputation for developing and implementing communications solutions that deliver results.  Informatel CEO Dennis Benjamin has been at the forefront of mass communications, helping clients reach their customers in effective and interactive ways.</p>
-
         <p>As well as Informatel’s fast gateway for SMS deployment, we believe our ability to offer multiple touch points to your customers is our greatest strength. Whether landline, mobile, apps, SMS, email or Web, we deliver fully managed, integrated solutions into your enterprise systems. From mission critical services to high capacity ‘avalanche’ promotions we understand and have the experience to ensure you ‘connect with your customers’.</p>
-
         <h4>Partners</h4>
         <p>Informatel has developed trusted relationships with a large number of partners.</p>
         <div class="row">
             <div class="span12">
                 <ul class="logo" style="text-align: center;">
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-2.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-2.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-3.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-3.png")" alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-5.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-5.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-8.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-8.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-11.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-11.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-20.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-20.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-15.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-15.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-16.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-16.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-17.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-17.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-18.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-18.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-19.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-19.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-21.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-21.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-22.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-22.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-23.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-23.png")"  alt="" /></li>
                     <li>
-                        <img src="~/Content/images/index/logo/140x45-24.png" alt=""></li>
+                        <img src="@Url.Content("/Content/images/index/logo/140x45-24.png")"  alt="" /></li>
                 </ul>
             </div>
         </div>
-
-        <br>
-
+        <br />
         <h4>Support</h4>
-
         <p>The Informatel 24/7 support team is just a phone call away. Our tech support is across all problems and customer service routinely deals with common consumer issues regarding telephone, mobiles, content and premium rate. We can also arrange a separate 1300/1800 number to be answered on your behalf.</p>
-
         <h4>Security</h4>
-
         <p>Informatel’s significant investment in infrastructure and processes delivers maximum data integrity and security. We monitor building alarms 24/7 and control access to rooms housing sensitive data with personalised proximity ID cards recording access and activity. Only required data is made available and an advanced firewall controls computer access. </p>
-
         <h4>Monitoring</h4>
-
         <p>Our 24/7 internal monitoring and alerting system monitors all core systems and services. Alerts are automatically escalated to technical support for immediate attention. Additionally an external security monitoring organisation ensures all system networks, firewalls and core systems are independently monitored and managed for extra security and support.</p>
-
         <br>
     </div>
     <!-- end .span8 -->
 </div>
 <!-- end .row -->
-<br>
+<br />

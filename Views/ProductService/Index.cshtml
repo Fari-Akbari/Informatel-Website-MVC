@@ -3,11 +3,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#my_image").attr("src", "/Content/images/index/products-banner.png");
-    });
-</script>
+@section JavaScriptHeader
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#my_image").attr("src", "/Content/images/index/products-banner.png");
+        });
+    </script>
+}
+
+<style>
+    input[type="submit"] {
+        text-transform: uppercase;
+        padding: 15px 30px;
+        font-size: 1.1em;
+        border-radius: 2px;
+        letter-spacing: 1px;
+        padding: 10px;
+    }
+</style>
 
 <div class="row">
     <div class="span8">
@@ -17,40 +31,40 @@
 <div class="divider single-dotted"></div>
 
 <div class="row">
-    <div id="pagewrap">
+    <div id=" ">
         <div id="content-text">
             <h4>AppsWiz</h4>
             <p>Apps for Every Business</p>
             <a href="http://www.appswiz.com">
                 <input type="submit" value="WEBSITE" />
             </a>
-            <br>
-            <br>
-            <img src="~/Content/images/index/appswiz-logo.png" alt="">
-            <br>
-            <br>
+            <br />
+            <br />
+            <img src="@Url.Content("/Content/images/index/appswiz-logo.png")" alt="" />
+            <br />
+            <br />
             <h4>Wake Me</h4>
             <p>Automated wakeup/reminder service to any phone</p>
             <a href="http://wakeme.com.au/">
                 <input type="submit" value="WEBSITE" /></a>
-            <br>
-            <br>
-            <img src="~/Content/images/index/wakeme-logo.png" alt="">
+            <br />
+            <br />
+            <img src="@Url.Content("/Content/images/index/wakeme-logo.png")" alt="" />
         </div>
         <div id="middle">
             <h4>HealthPro</h4>
             <p>Apps for Every Health Professional</p>
             <a href="http://www.healthproapps.com/">
                 <input type="submit" value="WEBSITE" /></a>
-            <br>
-            <br>
-            <img src="~/Content/images/index/health-pro-logo.png" alt="">
-            <br>
-            <br>
-            <br>
+            <br />
+            <br />
+            <img src="@Url.Content("/Content/images/index/health-pro-logo.png")" alt="" />
+            <br />
+            <br />
+            <br />
             <h4>BankSecure</h4>
             <p>Informatel's proprietary security system for banks</p>
-            <img src="~/Content/images/index/BankSecure-logo.png" alt="">
+            <img src="@Url.Content("/Content/images/index/BankSecure-logo.png")" alt="" />
         </div>
         <div id="sidebar-text">
             <h4>Medicaller</h4>
@@ -58,41 +72,36 @@
             <a href="http://medicaller.com/">
                 @*<button>website</button>*@
                 <input type="submit" value="WEBSITE" /></a>
-            <br>
-            <br>
-            <img src="~/Content/images/index/medicaller-logo.jpg" alt="">
-            <br>
-            <br>
-            <br>
+            <br />
+            <br />
+            <img src="@Url.Content("/Content/images/index/medicaller-logo.jpg")" alt="" />
+            <br />
+            <br />
+            <br />
             <h4>BankCaller</h4>
-
             <p>Informatel's reminder service for bank customers</p>
-            <img src="~/Content/images/index/Bankcaller-logo.png" alt="">
+            <img src="@Url.Content("/Content/images/index/Bankcaller-logo.png")" alt="" />
         </div>
     </div>
 </div>
 <br>
-
 <div class="row">
     <div id="pagewrap">
         <div id="content-text">
-            <img src="~/Content/images/index/icons-clock.png" alt=""><h4>Speaking Clock</h4>
+            <img src="@Url.Content("/Content/images/index/icons-clock.png")" alt="" /><h4>Speaking Clock</h4>
             <p>Telstra’s 1194 time service (commonly known as ‘George the speaking clock’) has been running for decades providing traceable and accurate time for all Australians. Informatel took over the delivery of the vital 1194 service in 2002. We understand accuracy and mission critical services and time is no exception. We all rely on time. Informatel has designed with our partners the National Measurement Institute (regulators of the national standard of time measurement) a system without compromise.</p>
-
             <p>Informatel’s core time system is a redundant pair of Rubidium Atomic Clocks which are maintained within 500 microseconds of UTC (AUS). The traceability of this clock to the National Measurement Institute (NMI) and UTC (AUS) is established by continuous monitoring and recording of data.</p>
-
             <p>Informatel’s extensive infrastructure systems ensure that even during high demand periods such daylight savings start/end and New Years Eve, your call will always get through.</p>
-
-            <br>
+            <br />
         </div>
         <div id="middle">
-            <img src="~/Content/images/index/vd-telstra-clock.jpg" alt="">
-            <br>
-            <br>
-            <img src="~/Content/images/index/icons-location.png" alt=""><h4>Location-Based Services</h4>
+            <img src="@Url.Content("/Content/images/index/vd-telstra-clock.jpg")" alt="" />
+            <br />
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-location.png")" alt="" /><h4>Location-Based Services</h4>
             <p>
                 Use our location engine technology to offer relevant location information directly to the consumer on the go.<br>
-                <br>
+                <br />
                 Informatel has over 10 years' experience with location-based services (LBS) and in that time has developed its own location engine technology that delivers relevant location information directly to the consumer on the go. Choose from:
             </p>
             <ul>
@@ -104,13 +113,12 @@
                 <li>Campaign promotion</li>
                 <li>Special offers/incentives</li>
             </ul>
-            <br>
+            <br />
         </div>
         <div id="sidebar-text">
             <p>People can be connected directly to the outlet or sent an information-rich SMS via a 1300 or 1800 number. Alternatively an SMS or MMS can be sent in response to either an SMS enquiry or one via your website.</p>
-
             <p>Our LBS can determine a consumer’s location via postcode or suburb or by tracking the location of a mobile or landline. Our LBS connects with customers 24/7 and by replacing multiple telephone listings with a single, prominent number it reduces your need for advertising space. It also provides valuable geographical data on callers, tracks each enquiry and provides feedback on actual response numbers and times. Plus it cuts down call centre and re-diversion charges.</p>
-            <br>
+            <br />
         </div>
     </div>
 </div>

@@ -3,12 +3,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#my_image").attr("src", "/Content/images/index/consult-banner.png");
-        $("#wrapper").hide();
-    });
-</script>
+@section JavaScriptHeader
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#my_image").attr("src", "/Content/images/index/consult-banner.png");
+            $("#wrapper").hide();
+        });
+    </script>
+}
 
 <div class="row">
     <div class="span8">
@@ -56,11 +59,11 @@
                     <li>Ability to create and implement recommended solutions if required</li>
                 </ul>
             </div>
-            <br>
+            <br />
             <div class="title">
                 <h3>
-                    <a href="contact.html">
-                        <img src="@Url.Content("/Content/images/icons/32x32/white/arrowright.png")" alt="" width="24" height="24">
+                    <a href="contact">
+                        <img src="@Url.Content("/Content/images/icons/32x32/white/arrowright.png")" alt="" width="24" height="24" />
                         Get in Touch</a>
                 </h3>
             </div>
@@ -71,4 +74,4 @@
     <!-- end .span4 -->
 </div>
 <!-- end .row -->
-<br>
+<br />

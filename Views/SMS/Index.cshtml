@@ -3,11 +3,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#my_image").attr("src", "/Content/images/index/sms-banner.png");
-    });
-</script>
+@section JavaScriptHeader
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#my_image").attr("src", "/Content/images/index/sms-banner.png");
+        });
+    </script>
+}
 
 <div class="row">
     <div class="span8">
@@ -17,49 +20,34 @@
 <div class="divider single-dotted"></div>
 <div class="row">
     <div id="pagewrap">
-
         <div id="content-text">
-
             <div class="testimonial-3 alt">
-
                 <blockquote>
                     <h5>Informatel offers multiple solutions for communicating with customers through SMS. This includes SMS gateways, online SMS solutions, API services, desktop SMS services and more.</h5>
                 </blockquote>
-
             </div>
             <!-- end .testimonial -->
-
-            <br>
-
-            <img src="~/Content/images/index/icons-premium.png" alt=""><h4>Premium Numbers</h4>
-
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-premium.png")" alt="" /><h4>Premium Numbers</h4>
             <p>Obtain a Premium number to collect fees for text messages or calls without setting up a complicated payment scheme. Informatel has been delivering Premium Rate services for over 20 years,  and is one of Australia’s original service providers.</p>
-
-            <img src="~/Content/images/index/icons-voice.png" alt=""><h4>Premium Rate Voice/SMS</h4>
+            <img src="@Url.Content("/Content/images/index/icons-voice.png")" alt="" /><h4>Premium Rate Voice/SMS</h4>
             <p>Premium Rate number holders can invoice the caller’s phone bills, providing a simple way to collect payments without the need to set up credit/ payment schemes. Premium Rate numbers have a  190 prefix and are charged a fixed rate per call or per minute. Alternatively, a 19 prefix allows fixed rate SMS’s to be sent or received.</p>
-
         </div>
         <div id="middle">
-
-            <img src="~/Content/images/index/icons-sms.png" alt=""><h4>Standard Rate SMS</h4>
+            <img src="@Url.Content("/Content/images/index/icons-sms.png")" alt="" /><h4>Standard Rate SMS</h4>
             <p>Not all services have to be charged at a premium. Provide a free, value added service with a 1300 or 1800 prefix. SMS services can also be provided using normal mobile numbers with an 04 prefix.</p>
-
-            <img src="~/Content/images/index/icons-credit-cards.png" alt=""><h4>Credit Cards</h4>
+            <img src="@Url.Content("/Content/images/index/icons-credit-cards.png")" alt="" /><h4>Credit Cards</h4>
             <p>Our credit card processing systems process real time transactions for Visa, Master Card, Bankcard, American Express or Diners Card, and can be tailored to beginner or expert users. Incorporate credit card capabilities into any of your IVR, SMS, mobile or web based applications.</p>
-
-            <img src="~/Content/images/index/icons-virtual-wallet.png" alt=""><h4>Virtual Wallet</h4>
+            <img src="@Url.Content("/Content/images/index/icons-virtual-wallet.png")" alt="" /><h4>Virtual Wallet</h4>
             <p>Our virtual wallet provides consumers an account with a nominated level of credit accessed by credit card, premium rate (IVR and SMS) and other interfaces (pre-paid cards etc) to pay for our merchant’s products and services or through external providers.</p>
-
         </div>
         <div id="sidebar-text">
-
             <h4>SMS to 1300 Numbers</h4>
-
             <p>Handle and transmit large numbers of voice calls, with every call answered. Informatel’s extensive communications infrastructure and support processes have earned a well-deserved reputation for successfully running Australia’s largest campaigns for clients like the Nine Network.</p>
-            <br>
+            <br />
             <div>
-                <img src="~/Content/images/index/SMS.png" alt=""></div>
+                <img src="@Url.Content("/Content/images/index/SMS.png")" alt="" />
+            </div>
         </div>
-
     </div>
 </div>

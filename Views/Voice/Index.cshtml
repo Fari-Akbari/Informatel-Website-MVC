@@ -2,94 +2,57 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
-     <div class="row">
-                <div class="span8">
-                    <h3><STRONG>VOICE</STRONG></h3>
-                </div>
-            </div>
-            <div class="divider single-dotted"></div>
- 
-                <div class="row">
-                    <div id="pagewrap">
-
-                        <div id="content-text">
-
-                            <img src="~/Content/images/index/icons-capacity.png" alt=""><h4>Capacity</h4>
-                    
-                            <p>Informatel manages campaigns for some of Australia’s largest organisations as well as fully customised and integrated business solutions for SME’s. We can guarantee any volume of calls or messages are dealt with promptly and efficiently.</p>
-
-
-                            <br>
-
-                            <img src="~/Content/images/index/icons-telephony.png" alt=""><h4>Telephony</h4>
-                    
-                            <p>Our investment in technology and resources has resulted in our own proprietary Interactive Voice Response (IVR) platform for specialised dimensioning and traffic controls. Utilising Telstra’s Intelligent Network, we can dynamically manage allocation telephone of resources for automatic overflow and resource protection so customers always receive the best service.</p>
-
-                            <br>
-                    
-
-                            <img src="~/Content/images/index/icons-messaging.png" alt=""><h4>Messaging</h4>
-                    
-                            <p>Informatel’s unique messaging platform ensures a consistent level of SMS message processing. Our multiple systems and sites deliver the highest level of service no matter how busy it gets.</p>
-
-                            <br>
-
-                            <img src="~/Content/images/index/icons-infra.png" alt=""><h4>Infrastructure</h4>
-                    
-                            <p>Reflecting decades of investment, our infrastructure is load balanced, redundant and scalable.</p>
-
-                            <br>
-
-                        </div>
-                    
-                        <div id="middle">
-
-                            <p>We provide the highest quality data services by utilising only tier 1 data communications providers and directly connecting to the Telstra’s Internet backbone. Our secure server farms deliver a high availability failover system across multiple locations like Telstra’s Exhibition exchange, one of Australia’s largest, most secure communications hubs.</p>
-
-                            <br>
-
-                            <img src="~/Content/images/index/icons-overflow.png" alt=""><h4>Overflow</h4>
-                    
-                            <p>Don’t worry about overflow ever again! Our mass call infrastructure routinely provides extra capacity so that no matter how busy you get, every call is answered.</p>
-                            <br>
-
-                            <img src="~/Content/images/index/icons-callback.png" alt=""><h4>Callback</h4>
-                    
-                            <p>Using our callback product a caller simply enters their telephone number via an IVR interface which is then sent to the call centre through a fully integrated API or as an email so the caller is called back. Options provided include:</p>
-
-                            <ul>
-                                <li>Playback to caller of scheduled callback day/time.</li>
-                                <li>Entering of identification number (e.g. policy no. or claim no.)</li>
-                                <li>Confirmation and generation of ticket numbers for reference.</li>
-                                <li>Confirmation of callback details via SMS.</li>
-                            </ul>
-                            <br>
-
-                            <p>Call recording sent with call back info for audio playback via call centre agent (include name and query details). Submission into the Informatel transcription system for data conversion.</p>
-
-                            <br>
-
-                        </div>
-
-                        <div id="sidebar-text">
-
-                            <img src="~/Content/images/index/icons-trans.png" alt=""><h4>Transcription</h4>
-                    
-                            <p>Informatel’s transcription system transcribes messages into text and collects and collates it for strategic dissemination.</p>
-                            <br>
-                    
-                            <img src="~/Content/images/index/icons-info-confirm.png" alt=""><h4>Information Confirmation</h4>
-                    
-                            <p>Send an SMS for numerical data like date/time and other details to ensure confirmation and accuracy.</p>
-                            <br>
-                            <img src="~/Content/images/index/icons-voice-record.png" alt=""><h4>Call Voice Recording</h4>
-                    
-                            <p>Capture acknowledgement and verbal agreements based on scripted terms and conditions. The call recording system allows calls to be recorded and replayed. Additionally it eliminates the need for repetitive script reads by playing it via the playback feature and then prompting the callers’ agreement or response. A caller enters their telephone number via an IVR interface which is then sent to the call centre through a fully integrated API or as an email so the caller is called.</p>
-                            <br>
-                
-                        </div>
-                    </div>
-                </div>
-            <br>
+<div class="row">
+    <div class="span8">
+        <h3><strong>VOICE</strong></h3>
+    </div>
+</div>
+<div class="divider single-dotted"></div>
+<div class="row">
+    <div id="pagewrap">
+        <div id="content-text">
+            <img src="@Url.Content("/Content/images/index/icons-capacity.png")" alt="" /><h4>Capacity</h4>
+            <p>Informatel manages campaigns for some of Australia’s largest organisations as well as fully customised and integrated business solutions for SME’s. We can guarantee any volume of calls or messages are dealt with promptly and efficiently.</p>
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-telephony.png")" alt="" /><h4>Telephony</h4>
+            <p>Our investment in technology and resources has resulted in our own proprietary Interactive Voice Response (IVR) platform for specialised dimensioning and traffic controls. Utilising Telstra’s Intelligent Network, we can dynamically manage allocation telephone of resources for automatic overflow and resource protection so customers always receive the best service.</p>
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-messaging.png")" alt="" /><h4>Messaging</h4>
+            <p>Informatel’s unique messaging platform ensures a consistent level of SMS message processing. Our multiple systems and sites deliver the highest level of service no matter how busy it gets.</p>
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-infra.png")" alt="" /><h4>Infrastructure</h4>
+            <p>Reflecting decades of investment, our infrastructure is load balanced, redundant and scalable.</p>
+            <br />
+        </div>
+        <div id="middle">
+            <p>We provide the highest quality data services by utilising only tier 1 data communications providers and directly connecting to the Telstra’s Internet backbone. Our secure server farms deliver a high availability failover system across multiple locations like Telstra’s Exhibition exchange, one of Australia’s largest, most secure communications hubs.</p>
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-overflow.png")" alt="" /><h4>Overflow</h4>
+            <p>Don’t worry about overflow ever again! Our mass call infrastructure routinely provides extra capacity so that no matter how busy you get, every call is answered.</p>
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-callback.png")" alt="" /><h4>Callback</h4>
+            <p>Using our callback product a caller simply enters their telephone number via an IVR interface which is then sent to the call centre through a fully integrated API or as an email so the caller is called back. Options provided include:</p>
+            <ul>
+                <li>Playback to caller of scheduled callback day/time.</li>
+                <li>Entering of identification number (e.g. policy no. or claim no.)</li>
+                <li>Confirmation and generation of ticket numbers for reference.</li>
+                <li>Confirmation of callback details via SMS.</li>
+            </ul>
+            <br />
+            <p>Call recording sent with call back info for audio playback via call centre agent (include name and query details). Submission into the Informatel transcription system for data conversion.</p>
+            <br />
+        </div>
+        <div id="sidebar-text">
+            <img src="@Url.Content("/Content/images/index/icons-trans.png")" alt="" /><h4>Transcription</h4>
+            <p>Informatel’s transcription system transcribes messages into text and collects and collates it for strategic dissemination.</p>
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-info-confirm.png")" alt="" /><h4>Information Confirmation</h4>
+            <p>Send an SMS for numerical data like date/time and other details to ensure confirmation and accuracy.</p>
+            <br />
+            <img src="@Url.Content("/Content/images/index/icons-voice-record.png")" alt="" /><h4>Call Voice Recording</h4>
+            <p>Capture acknowledgement and verbal agreements based on scripted terms and conditions. The call recording system allows calls to be recorded and replayed. Additionally it eliminates the need for repetitive script reads by playing it via the playback feature and then prompting the callers’ agreement or response. A caller enters their telephone number via an IVR interface which is then sent to the call centre through a fully integrated API or as an email so the caller is called.</p>
+            <br />
+        </div>
+    </div>
+</div>
+<br />
