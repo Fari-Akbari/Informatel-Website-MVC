@@ -20,27 +20,18 @@ namespace Informatel.Website.Controllers
         [HttpPost]
         public ActionResult Index(string first_name, string last_name, string email, string phone)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    MailMessage mail = new MailMessage();
-                    mail.To.Add("noreply@appswiz.com");
-                    mail.From = new MailAddress(email);
-                    mail.Subject = first_name + ' ' + last_name;
-                    mail.Body = phone;
-
-                    System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("infemail01");
-                    smtp.Send(mail);
-
-                    return RedirectToAction("Index", "Home");
-                }
-                return View();
+                MailMessage mail = new MailMessage();
+                mail.To.Add("noreply@appswiz.com");
+                mail.From = new MailAddress(email);
+                mail.Subject = "Informatel-Contact Us";
+                mail.Body = string.Format("Name:{0} \n Phone: {1}", first_name + ' ' + last_name, phone);
+                System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("infemail01");
+                smtp.Send(mail);
+                return RedirectToAction("Index", "Home");
             }
-            catch (Exception ex)
-            {
-                return View();
-            }
+            return View();
         }
 	}
 }
