@@ -525,22 +525,23 @@
 
 /* #Misc
    ========================================================================== */
-   @media screen and (max-width: 70em) {
+@media screen and (max-width: 70em) {
 
-   	input,
-	textarea,
-	select {
-		width: 100% !important;
-		padding: 10px !important;
-	}
+    input,
+    textarea,
+    select {
+        width: 100% !important;
+        padding: 10px !important;
+    }
 
 
-   @media screen and (max-width: 48em) {
-   
-   	input,
-	textarea,
-	select {
-		width: 100% !important;
-		padding: 10px !important;
-	}
+    @media screen and (max-width: 48em) {
+
+        input,
+        textarea,
+        select {
+            width: 100% !important;
+            padding: 10px !important;
+        }
+    }
 }

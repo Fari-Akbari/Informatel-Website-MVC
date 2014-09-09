@@ -1,31 +1,28 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Health :: Informatel";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section HeadMeta
 {
-    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
+    <meta name="description" content="Informatel has developed significant expertise in the delivery of health and well-being services, working closely with Telstra Health particularly, as well as involvement in medication management services.  Informatel’s division HealthPro has developed many mobile apps for healthcare clients.">
     <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
     <meta name="author" content="informatel - http://www.informatel.com">
 }
 
-<div id="header-menu">
-    @section banner
-                    {
+@section HeaderMenu
+{
+    <div id="header-menu">
         <div class="banner" style="width: 100%; overflow: hidden;">
             <img src="@Url.Content("/Content/images/index/health-banner.png")" alt="" id="my_image" />
         </div>
-    }
-    @section slimmenu
-                    {
         <div id="wrapper">
             <header class="cf">
                 <nav>
                     <ul class="slimmenu">
                         <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
                         <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
-                        <li>@Html.ActionLink("APPS", "Index", "APPS")</li>
+                        <li>@Html.ActionLink("APPS", "Index", "Apps")</li>
                         <li>@Html.ActionLink("PRODUCTS AND SERVICES", "Index", "ProductService")</li>
                         <li>@Html.ActionLink("BANKING", "Index", "Banking")</li>
                         <li>@Html.ActionLink("HEALTH", "Index", "Health")</li>
@@ -35,10 +32,9 @@
                 </nav>
             </header>
         </div>
-    }
-    <br />
-</div>
-
+        <br />
+    </div>
+}
 <div class="row">
     <div class="span8">
         <h3><strong>HEALTH</strong></h3>
