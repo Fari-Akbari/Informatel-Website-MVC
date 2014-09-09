@@ -1,26 +1,31 @@
 ﻿@{
-    ViewBag.Title = "Auto :: Informatel";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @section HeadMeta
 {
-    <meta name="description" content="Informatel has long worked with the auto industry, with our mobile app division AppsWiz creating apps for a large number of car dealers and other auto industry professionals.">
+    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
     <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
     <meta name="author" content="informatel - http://www.informatel.com">
 }
-@section HeaderMenu
-{
-    <div id="header-menu">
+
+<div id="header-menu">
+    @section banner
+                    {
         <div class="banner" style="width: 100%; overflow: hidden;">
             <img src="@Url.Content("/Content/images/index/auto-banner.png")" alt="" id="my_image" />
         </div>
+    }
+    @section slimmenu
+                    {
         <div id="wrapper">
             <header class="cf">
                 <nav>
                     <ul class="slimmenu">
                         <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
                         <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
-                        <li>@Html.ActionLink("APPS", "Index", "Apps")</li>
+                        <li>@Html.ActionLink("APPS", "Index", "APPS")</li>
                         <li>@Html.ActionLink("PRODUCTS AND SERVICES", "Index", "ProductService")</li>
                         <li>@Html.ActionLink("BANKING", "Index", "Banking")</li>
                         <li>@Html.ActionLink("HEALTH", "Index", "Health")</li>
@@ -30,9 +35,10 @@
                 </nav>
             </header>
         </div>
-        <br />
-    </div>
-}
+    }
+    <br />
+</div>
+
 
 <div class="row">
     <div class="span8">

@@ -1,27 +1,30 @@
 ﻿@{
-    ViewBag.Title = "Banking :: Informatel";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section HeadMeta
 {
-    <meta name="description" content="Informatel has developed significant communications expertise in the banking sector, working with many of Australia’s major banks, financial institutions and insurance companies.  Informatel’s reputation is unparalleled for delivering mission critical services such as payment authentication and other secure customer communications.">
+    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
     <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
     <meta name="author" content="informatel - http://www.informatel.com">
 }
-@section HeaderMenu
-{
-    <div id="header-menu">
+<div id="header-menu">
+    @section banner
+                    {
         <div class="banner" style="width: 100%; overflow: hidden;">
             <img src="@Url.Content("/Content/images/index/banking-banner.png")" alt="" id="my_image" />
         </div>
+    }
+    @section slimmenu
+                    {
         <div id="wrapper">
             <header class="cf">
                 <nav>
                     <ul class="slimmenu">
                         <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
                         <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
-                        <li>@Html.ActionLink("APPS", "Index", "Apps")</li>
+                        <li>@Html.ActionLink("APPS", "Index", "APPS")</li>
                         <li>@Html.ActionLink("PRODUCTS AND SERVICES", "Index", "ProductService")</li>
                         <li>@Html.ActionLink("BANKING", "Index", "Banking")</li>
                         <li>@Html.ActionLink("HEALTH", "Index", "Health")</li>
@@ -31,10 +34,9 @@
                 </nav>
             </header>
         </div>
-        <br />
-    </div>
-}
-
+    }
+    <br />
+</div>
 <div class="row">
     <div class="span8">
         <h3><strong>BANKING</strong></h3>
@@ -54,9 +56,9 @@
                 <ul>
                     <li>BankSecure</li>
                     <li>BankCaller</li>
-                    <li>@Html.ActionLink("Apps", "Index", "APPS")</li>
+                    <li>@Html.ActionLink("APPS", "Index", "APPS")</li>
                     <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
-                    <li>@Html.ActionLink("Voice", "Index", "Voice")</li>
+                    <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
                     <li>@Html.ActionLink("Location Based Services", "Index", "ProductService")</li>
                 </ul>
             </div>

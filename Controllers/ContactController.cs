@@ -29,6 +29,7 @@ namespace Informatel.Website.Controllers
                     mail.From = new MailAddress(email);
                     mail.Subject = first_name + ' ' + last_name;
                     mail.Body = phone +' '+ message;
+
                     System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("infemail01");
                     smtp.Send(mail);
 

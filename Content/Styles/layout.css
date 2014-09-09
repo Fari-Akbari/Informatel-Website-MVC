@@ -18,6 +18,8 @@
 
 }
 
+
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 
 	.og-close{ z-index: 999; } } 
 @media only screen and (min-width : 321px) { 
@@ -2098,10 +2100,10 @@ MEDIA QUERIES
 	#portfolio .bx-prev {
 		left: auto;
 		right: 70px;
-		background: url(../Content/Assets/bxslider/images/arrow-left.png) no-repeat top left;
+		background: url(../js/bxslider/images/arrow-left.png) no-repeat top left;
 	}
 	
-	#portfolio .bx-next { background: url(../Content/Assets/bxslider/images/arrow-right.png) no-repeat top left; }
+	#portfolio .bx-next { background: url(../js/bxslider/images/arrow-right.png) no-repeat top left; }
 	
 	#portfolio .portfolio-item,
 	#portfolio .portfolio-item-preview {
