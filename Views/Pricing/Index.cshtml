@@ -1,13 +1,17 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Pricing :: Informatel";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 @section HeadMeta
 {
-    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
+    <meta name="description" content="Informatel offers some of the most competitive pricing in the industry.  Whilst many of our clients have customized solutions and pricing structures.">
     <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
     <meta name="author" content="informatel - http://www.informatel.com">
+}
+@section JavaScriptIncludes
+{
+    <script src="@Url.Content("/Content/Scripts/waypoints/waypoints.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("/Content/Scripts/plugins.js")" type="text/javascript"></script>
 }
 
 <div class="callout-box-6a">
@@ -87,11 +91,3 @@
 </div>
 <!-- end .callout-box-3a -->
 <br />
-
-@section JavaScriptIncludes
-{
-    <!-- /// Waypoints ////////  -->
-    <script src="@Url.Content("/Content/Scripts/waypoints/waypoints.min.js")" type="text/javascript"></script>
-    <!-- /// Custom JS ////////  -->
-    <script src="@Url.Content("/Content/Scripts/plugins.js")" type="text/javascript"></script>
-}

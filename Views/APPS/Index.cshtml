@@ -1,14 +1,13 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Apps :: Informatel";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section HeadMeta
 {
-    <meta name="description" content="Android App Development, Android Developer, Android Development, At Informatel We Develop Android Mobile Apps For Clients Big & Small, Call Us Today!">
+    <meta name="description" content="Informatel builds high quality customised apps for any type of business or organisation. If you wish to engage with your customers in a more customized way or from a unique data source, our Informatel consultants can advise how best to meet your specific needs. If your app is needed to improve productivity, we’ll show you how a customised app can make a difference to your bottom line.">
     <meta name="keywords" content="iOS App Development, iPhone App Development, iOS Developer, iOS Development" />
     <meta name="author" content="informatel - http://www.informatel.com">
 }
-
 @section CascadingStyleSheetClasses
 {
     <style>
@@ -21,25 +20,26 @@
             padding: 10px;
             background: #516da6;
         }
+        input[type="submit"]:hover {
+        background: none repeat scroll 0 0 #3a5489;
+        color: #ffffff;
+        text-shadow: none;
+        }
     </style>
 }
-
-<div id="header-menu">
-    @section banner
-                    {
+@section HeaderMenu
+{
+    <div id="header-menu">
         <div class="banner" style="width: 100%; overflow: hidden;">
             <img src="@Url.Content("/Content/images/index/apps-banner.png")" alt="" id="my_image" />
         </div>
-    }
-    @section slimmenu
-                    {
         <div id="wrapper">
             <header class="cf">
                 <nav>
                     <ul class="slimmenu">
                         <li>@Html.ActionLink("SMS", "Index", "SMS")</li>
                         <li>@Html.ActionLink("VOICE", "Index", "Voice")</li>
-                        <li>@Html.ActionLink("APPS", "Index", "APPS")</li>
+                        <li>@Html.ActionLink("APPS", "Index", "Apps")</li>
                         <li>@Html.ActionLink("PRODUCTS AND SERVICES", "Index", "ProductService")</li>
                         <li>@Html.ActionLink("BANKING", "Index", "Banking")</li>
                         <li>@Html.ActionLink("HEALTH", "Index", "Health")</li>
@@ -49,10 +49,12 @@
                 </nav>
             </header>
         </div>
-    }
-    <br />
-</div>
+        <br />
+    </div>
+}
 
+
+<script src="@Url.Content("/Content/Scripts/jquery.slimmenu.js")" type="text/javascript"></script>
 <div class="row">
     <div class="span8">
         <h3><strong>APPS</strong></h3>
@@ -85,7 +87,7 @@
                 <input type="submit" value="CONTACT US" /></a>
             <br />
             <br />
-            <p>For more information see <a target="_blank" href="http://www.appswiz.com">www.appswiz.com.</a></p>
+            <p>For more information see <a target="_blank" href="http://www.appswiz.com">www.appswiz.com</a>.</p>
             <img src="@Url.Content("/Content/images/index/appswiz-logo.png")" alt="" />
         </div>
     </div>
